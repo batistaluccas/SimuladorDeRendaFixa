@@ -3,6 +3,19 @@ const table = document.querySelector('table');
 
 
 btn.onclick = function(){
+    
+    let startingAmount = document.querySelector('#startingAmount').value || 0;
+    let monthlyAmount = document.querySelector('#monthlyAmount').value || 0;
+    let interestRates = document.querySelector('#interestRates').value || 0;
+    let period = document.querySelector('#period').value || 0;
+    let invest = document.querySelector('#invest');
+    let accumulate = document.querySelector('#accumulate');
+    let fromRates = document.querySelector('#fromRates');
+    
+    let C = parseFloat(startingAmount);
+    let i = parseFloat(interestRates);
+    let n = parseFloat(period);
+    let a = parseFloat(monthlyAmount);
 
     if (table.childElementCount){
         document.querySelectorAll('tr').forEach((element) => element.remove())
@@ -10,18 +23,6 @@ btn.onclick = function(){
 
     function calculate (){
 
-        let startingAmount = document.querySelector('#startingAmount').value || 0;
-        let monthlyAmount = document.querySelector('#monthlyAmount').value || 0;
-        let interestRates = document.querySelector('#interestRates').value || 0;
-        let period = document.querySelector('#period').value || 0;
-        let invest = document.querySelector('#invest');
-        let accumulate = document.querySelector('#accumulate');
-        let fromRates = document.querySelector('#fromRates');
-        
-        let C = parseFloat(startingAmount);
-        let i = parseFloat(interestRates);
-        let n = parseFloat(period);
-        let a = parseFloat(monthlyAmount);
         
         let investAmount = parseFloat(((a*n) + C).toFixed(2));
         invest.value = investAmount;
