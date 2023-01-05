@@ -27,31 +27,27 @@
                         <input id="interestRates"  class="input" value="1" type="text" placeholder="0,00 %"><br>
                         
                         <label for="period">Periodo de investimento</label>
-                        <input id="period" class="input" value="24" type="text" placeholder="0"><br><br>
+                        <input id="period" class="input" value="24" type="text" placeholder="0"><br>
 
-                        <label for="accumulate">Valor Acumulado</label>
-                        <input id="accumulate" class="input" readonly autofocus placeholder="R$ 0,00"><br>
-                        
                         <button id="btn" type="button">calcular</button>
+
                     </form>
+                    <section id="result" hidden>
+                        <label for="invest">Total investido</label>
+                        <input id="invest" class="input" readonly autofocus placeholder="R$ 0,00"><br>
+
+                        <label for="accumulate">Total acumulado</label>
+                        <input id="accumulate" class="input" readonly autofocus placeholder="R$ 0,00"><br>
+
+                        <label for="fromRates">Juros gerados</label>
+                        <input id="fromRates" class="input" readonly autofocus placeholder="R$ 0,00"><br>
+                    </section>
                 </fieldset>
             </div>
-            <div>
+            <div id="table" class="exist" hidden>
                 <fieldset>
                     <h2>Juros gerados a cada mês</h2>
-                    <table>                
-                        <tr>
-                            <td>1º mês</td>
-                            <td colspan="2"></td>
-                        </tr>
-                        <tr>
-                            <td>2º mês</td>
-                            <td colspan="2"></td>
-                        </tr>
-                        <tr>
-                            <td>3º mês</td>
-                            <td colspan="2"></td>
-                        </tr>
+                    <table>
                     </table>
                 </fieldset>
             </div>

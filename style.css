@@ -18,7 +18,11 @@
         border-radius: 20px;
     }
 
-    form {
+    fieldset:first-child {
+        height: auto;
+    }
+
+    form, section {
         width: calc(72%);
         text-align: right;
         line-height: 30px;
@@ -28,13 +32,19 @@
         text-align: center;
         color: rgb(71, 195, 90);
     }
+
+    fieldset:last-child {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+    }
     
     table {
         display: flex;
-        flex-direction: row;
-        text-align: center;
-        justify-content: center;
-        height: 100px;
+        flex-direction: column;
+        height: 150px;
         overflow: auto;
     }
 
