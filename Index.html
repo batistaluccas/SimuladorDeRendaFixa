@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renda Fixa</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./images/icon.png">
+    
+</head>
+    <body>
+        <header>
+            <h1>Simulador de renda fixa</h1>
+        </header>
+        <main>
+            <div>
+                <fieldset>            
+                    <form action="">
+                        <label for="startingAmount">Valor inicial</label>
+                        <input id="startingAmount" class="input" value="1000" type="number" autofocus placeholder="R$ 0,00"><br>
+                        
+                        <label for="monthlyAmount">Aporte mensal</label>
+                        <input id="monthlyAmount"  class="input" value="100" type="text" placeholder="R$ 0,00"><br>
+                        
+                        <label for="interestRates">Taxa de juros</label>
+                        <input id="interestRates"  class="input" value="1" type="text" placeholder="0,00 %"><br>
+                        
+                        <label for="period">Periodo de investimento</label>
+                        <input id="period" class="input" value="24" type="text" placeholder="0"><br><br>
+
+                        <label for="accumulate">Valor Acumulado</label>
+                        <input id="accumulate" class="input" readonly autofocus placeholder="R$ 0,00"><br>
+                        
+                        <button id="btn" type="button">calcular</button>
+                    </form>
+                </fieldset>
+            </div>
+            <div>
+                <fieldset>
+                    <h2>Juros gerados a cada mês</h2>
+                    <table>                
+                        <tr>
+                            <td>1º mês</td>
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td>2º mês</td>
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td>3º mês</td>
+                            <td colspan="2"></td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </div>
+        </main>
+    
+    </body>
+
+<script src="calculate.js"></script>
+</html>
