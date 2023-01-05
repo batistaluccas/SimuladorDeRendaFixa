@@ -1,9 +1,12 @@
     * {
         font-family: Arial, Helvetica, sans-serif;         
-        font-weight: bold;
-        
+        font-weight: bold;        
+    }     
+   
+    h1 {
+        text-align: center;
+        color: rgb(71, 195, 90);
     }
-
     body {
         background-image: url("./images/body_back.jpg");
         background-size: calc(120%);
@@ -19,18 +22,8 @@
     }
 
     fieldset:first-child {
+        display: flex;
         height: auto;
-    }
-
-    form, section {
-        width: calc(72%);
-        text-align: right;
-        line-height: 30px;
-    }
-
-    h1 {
-        text-align: center;
-        color: rgb(71, 195, 90);
     }
 
     fieldset:last-child {
@@ -41,6 +34,43 @@
         height: auto;
     }
     
+    form, section {
+        padding-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:right;
+        width: 410px;
+        gap: 4px;
+    }    
+
+    button {
+        margin-right: 4px;
+        background-color: rgba(30, 211, 39, 0.3);
+        border-radius: 5px;
+    }
+
+    input {
+        background-color: rgba(150, 203, 147, 0.3);
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+
+    #accumulate {
+        background-color: rgba(0, 128, 0, 0.3);
+    }
+
+    label ~ input {
+        margin-left: calc(30px);
+    }    
+
+    div ~ div {
+        margin-top: 20px;
+    }
+    
     table {
         display: flex;
         flex-direction: column;
@@ -48,33 +78,44 @@
         overflow: auto;
     }
 
+    table::-webkit-scrollbar-thumb {
+        background-color: rgb(6, 55, 14);
+        border-radius: 4px;
+        border: 1px solid black;
+    }
+    
+    table::-webkit-scrollbar {
+        width: 15px;
+    }
+
+    table::-webkit-scrollbar-track {
+        background: rgba(3, 158, 3, 0.3);
+        padding: 2px;
+        border-radius: 4px;
+    }
+
     table, td {
         border-collapse: collapse;
         margin: auto;        
     }
 
+    [hidden] {
+        display: none;
+    }
+
     td {
-        border: 2px solid black;
-        padding: 5px 10px;
+        border: 1px solid black;
+        padding: 2px 10px;
         width: 70px;
         text-align: center;
     }
 
     tr:nth-child(even) {
-        background-color: rgb(103, 196, 127);        
+        background-color: rgba(4, 235, 62, 0.3);        
     }
     
     tr:nth-child(odd) {
-        background-color: rgb(150, 203, 147);        
-    }
-
-
-    label ~ input {
-        margin-left: calc(30px);
-    }
-
-    div ~ div {
-        margin-top: 20px;
+        background-color: rgba(180, 216, 178, 0.3);        
     }
 
 

@@ -21,25 +21,25 @@
                         <input id="startingAmount" class="input" value="1000" type="number" autofocus placeholder="R$ 0,00"><br>
                         
                         <label for="monthlyAmount">Aporte mensal</label>
-                        <input id="monthlyAmount"  class="input" value="100" type="text" placeholder="R$ 0,00"><br>
+                        <input id="monthlyAmount"  class="input" value="100" type="number" placeholder="R$ 0,00"><br>
                         
                         <label for="interestRates">Taxa de juros</label>
-                        <input id="interestRates"  class="input" value="1" type="text" placeholder="0,00 %"><br>
+                        <input id="interestRates"  class="input" value="1" type="number" placeholder="0,00 %"><br>
                         
                         <label for="period">Periodo de investimento</label>
-                        <input id="period" class="input" value="24" type="text" placeholder="0"><br>
+                        <input id="period" class="input" value="24" type="number" placeholder="0"><br>
 
                         <button id="btn" type="button">calcular</button>
 
                     </form>
                     <section id="result" hidden>
-                        <label for="invest">Total investido</label>
-                        <input id="invest" class="input" readonly autofocus placeholder="R$ 0,00"><br>
-
                         <label for="accumulate">Total acumulado</label>
                         <input id="accumulate" class="input" readonly autofocus placeholder="R$ 0,00"><br>
 
-                        <label for="fromRates">Juros gerados</label>
+                        <label for="invest">Total investido</label>
+                        <input id="invest" class="input" readonly autofocus placeholder="R$ 0,00"><br>
+
+                        <label for="fromRates">Total em juros</label>
                         <input id="fromRates" class="input" readonly autofocus placeholder="R$ 0,00"><br>
                     </section>
                 </fieldset>
