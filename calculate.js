@@ -1,8 +1,6 @@
-const btn = document.querySelector('#btn');
 const table = document.querySelector('table');
 
-
-btn.onclick = function(){
+function calcular(){
 
     let startingAmount = document.querySelector('#startingAmount').value || 0;
     let monthlyAmount = document.querySelector('#monthlyAmount').value || 0;
@@ -11,15 +9,19 @@ btn.onclick = function(){
     let invest = document.querySelector('#invest');
     let accumulate = document.querySelector('#accumulate');
     let fromRates = document.querySelector('#fromRates');
+
+    console.log(startingAmount);
     
     let C = parseFloat(startingAmount);
     let i = parseFloat(interestRates);
     let n = parseFloat(period);
     let a = parseFloat(monthlyAmount);
-
-    if (table.childElementCount){
+    
+    console.log(C);
+    
+    if (table.childNodes){
         document.querySelectorAll('tr').forEach((element) => element.remove())
-    } 
+    }
 
     function calculateResult (){
         
@@ -48,9 +50,9 @@ btn.onclick = function(){
             
             const newRow = document.createElement('tr');
             const newMonth = document.createElement('td');
-            newMonth.innerText = (counter + 1) + "° mês";
+            newMonth.innerText = `${counter + 1} °mês`;
             const newData = document.createElement('td');
-            newData.innerText = "R$ "+parseFloat(totalByMonth[counter]).toFixed(2);
+            newData.innerText = `R$ ${parseFloat(totalByMonth[counter]).toFixed(2)}`;
             table.append(newRow);
             newRow.append(newMonth);
             newRow.append(newData);            
