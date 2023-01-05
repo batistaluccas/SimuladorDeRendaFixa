@@ -1,6 +1,5 @@
 const btn = document.querySelector('#btn');
 const table = document.querySelector('table');
-console.log(table.firstChild)
 
 
 btn.onclick = function(){
